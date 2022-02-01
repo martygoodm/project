@@ -1,9 +1,19 @@
 "use strict";
 
-const category = 'playble';
+const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?', '1');
 
-console.log(`apple.org/${category}/5` );
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-const user = 'Антон';
+const a = prompt('Какой фильм вы смотрели последним?', ''),
+      b = prompt('Какую оценку можете дать ему?', '5'),
+      c = prompt('Какой фильм вы смотрели последним?', ''),
+      d = prompt('Какую оценку можете дать ему?', '5'); 
 
-alert(`Привет, ${user}`);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[d] = c; 
